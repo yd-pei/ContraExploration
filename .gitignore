@@ -18,10 +18,11 @@ dist/
 !.env.example
 .DS_Store
 
-# Training outputs and ROMs
+# Training outputs and ROMs (keep the required Contra ROM)
 runs/
-roms/
+/roms/*
 *.nes
+!/roms/Contra-USA.nes
 *.bk2
 *.pt
 *.pth

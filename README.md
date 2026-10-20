@@ -183,7 +183,12 @@ uv run python -m contra_rl.experiments \
 
 ## ROM 与验证产物
 
-本地 `roms/Contra-USA.nes`，131,088 字节。去 16 字节 iNES 头的 SHA-1 为 `979494e7869ac7ab4815fdbd1dc99f893f713fbf`，与 Stable Retro 集成匹配。来源、访问及核查记录见 [ROM 下载记录](reports/rom-provenance.json)。重建环境后可用 `uv run contra-rl import-rom roms/Contra-USA.nes` 重新导入。ROM 不打包到代码中。
+仓库包含 `roms/Contra-USA.nes`，131,088 字节。去 16 字节 iNES 头的 SHA-1 为 `979494e7869ac7ab4815fdbd1dc99f893f713fbf`，与 Stable Retro 集成匹配。来源、访问及核查记录见 [ROM 下载记录](reports/rom-provenance.json)。克隆到 Colab 或其他新环境并安装依赖后，需要将仓库里的 ROM 导入 Stable Retro：
+
+```bash
+uv run contra-rl import-rom roms/Contra-USA.nes
+uv run contra-rl doctor
+```
 
 - [三奖励真实 ROM 验证](reports/three-reward-rom-validation.json)：每组重放同一 4,000 动作序列，物理观测/共同指标完全相同，并观察到 +100 游戏分数对应 +1 裁剪奖励。
 - [短程实验配置](experiments/reward-smoke.json)、`runs/reward-smoke-v2/manifest.json`、`comparison.csv`：每模式同 seed、同预算的训练/评估执行验证，不是效果结论。
