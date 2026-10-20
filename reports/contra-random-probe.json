@@ -1,0 +1,101 @@
+[
+  {
+    "episode": 0,
+    "game": "Contra-Nes",
+    "policy": "random",
+    "steps": 2000,
+    "return_": 0.0,
+    "raw_return": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "initial": {
+      "game_over": 0,
+      "level": 0,
+      "player_state": 1,
+      "score": 0,
+      "lives": 2,
+      "xscroll": 0
+    },
+    "final": {
+      "game_over": 0,
+      "level": 0,
+      "player_state": 1,
+      "score": 0,
+      "lives": 2,
+      "xscroll": 0,
+      "success": false,
+      "lost_life": false,
+      "death": false,
+      "progress_max": 0,
+      "raw_reward": 0.0,
+      "shaped_reward": 0.0,
+      "decision_steps": 2000
+    }
+  },
+  {
+    "episode": 1,
+    "game": "Contra-Nes",
+    "policy": "random",
+    "steps": 722,
+    "return_": -0.33203125,
+    "raw_return": 171.0,
+    "terminated": true,
+    "truncated": false,
+    "initial": {
+      "game_over": 0,
+      "level": 0,
+      "player_state": 1,
+      "score": 0,
+      "lives": 2,
+      "xscroll": 0
+    },
+    "final": {
+      "game_over": 0,
+      "level": 0,
+      "player_state": 2,
+      "score": 3,
+      "lives": 2,
+      "xscroll": 171,
+      "success": false,
+      "lost_life": false,
+      "death": true,
+      "progress_max": 171,
+      "raw_reward": 0.0,
+      "shaped_reward": -1.0,
+      "decision_steps": 722
+    }
+  },
+  {
+    "episode": 2,
+    "game": "Contra-Nes",
+    "policy": "random",
+    "steps": 2000,
+    "return_": 0.06640625,
+    "raw_return": 17.0,
+    "terminated": false,
+    "truncated": true,
+    "initial": {
+      "game_over": 0,
+      "level": 0,
+      "player_state": 1,
+      "score": 0,
+      "lives": 2,
+      "xscroll": 0
+    },
+    "final": {
+      "game_over": 0,
+      "level": 0,
+      "player_state": 1,
+      "score": 1,
+      "lives": 2,
+      "xscroll": 17,
+      "success": false,
+      "lost_life": false,
+      "death": false,
+      "progress_max": 17,
+      "raw_reward": 0.0,
+      "shaped_reward": 0.0,
+      "decision_steps": 2000
+    }
+  }
+]

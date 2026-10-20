@@ -1,0 +1,25 @@
+{
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "versions": {
+    "torch": "2.14.1",
+    "stable-retro": "1.0.1",
+    "gymnasium": "1.4.0"
+  },
+  "mps_available": false,
+  "game": "Contra-Nes",
+  "integration": "/Volumes/X10Pro/Research/Random/ContraExploration/.venv/lib/python3.12/site-packages/stable_retro/data/experimental/Contra-Nes",
+  "expected_sha1_without_ines_header": "979494e7869ac7ab4815fdbd1dc99f893f713fbf",
+  "states": [
+    "Level8.state",
+    "Level6.state",
+    "Level4.state",
+    "Level2.state",
+    "Level5.state",
+    "Level7.state",
+    "Level3.state",
+    "Level1.state"
+  ],
+  "rom": "/Volumes/X10Pro/Research/Random/ContraExploration/.venv/lib/python3.12/site-packages/stable_retro/data/experimental/Contra-Nes/rom.nes",
+  "rom_valid": true
+}

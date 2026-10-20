@@ -1,0 +1,15 @@
+{
+  "loop": {
+    "parameter_max_abs_error_vs_float64": 2.159709007187871e-07,
+    "exp_avg_max_relative_error_vs_float64": 1.1981207800469862e-06,
+    "exp_avg_sq_max_relative_error_vs_float64": 1.4329811698791476e-07
+  },
+  "fused": {
+    "parameter_max_abs_error_vs_float64": 2.159709007187871e-07,
+    "exp_avg_max_relative_error_vs_float64": 1.1981207800469862e-06,
+    "exp_avg_sq_max_relative_error_vs_float64": 1.3001035513220143e-05
+  },
+  "parameter_max_difference_between_backends": 1.4901161193847656e-08,
+  "float32_one_minus_beta2": 0.0009999871253967285,
+  "exact_one_minus_beta2": 0.001
+}

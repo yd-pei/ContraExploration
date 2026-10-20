@@ -1,0 +1,32 @@
+# Local Python environments and caches
+.venv/
+.uv-cache/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Local secrets and macOS metadata
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Training outputs and ROMs
+runs/
+roms/
+*.nes
+*.bk2
+*.pt
+*.pth
+
+# Generated console logs, recordings, and redundant working snapshot
+*.log
+/reports/*.mp4
+/reports/performance/baseline_source/

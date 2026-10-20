@@ -1,0 +1,435 @@
+{
+  "device": "mps",
+  "phase_timers_synchronized": false,
+  "phase_timing_note": "Nested phase totals overlap; without sync MPS timings measure host dispatch, not isolated GPU kernels",
+  "measured_seconds": 25.735885333000624,
+  "steps_per_second": 79.57760044003186,
+  "emulator_frames_per_second": 318.1938330094829,
+  "updates_per_second": 17.44645634647183,
+  "steps": 2048,
+  "updates": 449,
+  "process_cpu_percent_mean": 35.88542954905687,
+  "cpu_percent_note": "100% = one CPU core; 1000% = all 10 cores on this Mac",
+  "peak_rss_bytes": 632668160,
+  "phases": {
+    "inference": {
+      "seconds": 5.281667172966991,
+      "calls": 2048,
+      "mean_ms": 2.5789390493002884
+    },
+    "emulator_step": {
+      "seconds": 2.126918899048178,
+      "calls": 8189,
+      "mean_ms": 0.25972877018539237
+    },
+    "preprocessing": {
+      "seconds": 0.5252441979646392,
+      "calls": 2048,
+      "mean_ms": 0.25646689353742147
+    },
+    "env_step_total": {
+      "seconds": 2.7605854659923352,
+      "calls": 2048,
+      "mean_ms": 1.34794212206657
+    },
+    "replay_add": {
+      "seconds": 0.07820814798833453,
+      "calls": 2048,
+      "mean_ms": 0.03818757225992897
+    },
+    "logging": {
+      "seconds": 0.013965718007966643,
+      "calls": 224,
+      "mean_ms": 0.06234695539270823
+    },
+    "replay_sample": {
+      "seconds": 0.14438149598572636,
+      "calls": 449,
+      "mean_ms": 0.32156235186130594
+    },
+    "tensor_transfer": {
+      "seconds": 0.9006012109821313,
+      "calls": 449,
+      "mean_ms": 2.0057933429446133
+    },
+    "learn_forward_and_projection": {
+      "seconds": 1.226361450033437,
+      "calls": 449,
+      "mean_ms": 2.7313172606535345
+    },
+    "backward_and_clip": {
+      "seconds": 0.6886223690125917,
+      "calls": 449,
+      "mean_ms": 1.533680109159447
+    },
+    "optimizer": {
+      "seconds": 0.1334058709871897,
+      "calls": 449,
+      "mean_ms": 0.2971177527554336
+    },
+    "priority_update": {
+      "seconds": 9.47531991602591,
+      "calls": 449,
+      "mean_ms": 21.10316239649423
+    },
+    "learn_total": {
+      "seconds": 17.391935489955358,
+      "calls": 449,
+      "mean_ms": 38.73482291749523
+    },
+    "checkpoint": {
+      "seconds": 0.17741020799803664,
+      "calls": 1,
+      "mean_ms": 177.41020799803664
+    }
+  },
+  "samples": [
+    {
+      "seconds": 0.5098268750007264,
+      "process_cpu_percent": 63.12336366707279,
+      "rss_bytes": 529088512,
+      "system_gpu_device_percent": 77
+    },
+    {
+      "seconds": 1.05859375,
+      "process_cpu_percent": 35.79352343383696,
+      "rss_bytes": 531382272,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 1.6126792909999494,
+      "process_cpu_percent": 33.807415306658775,
+      "rss_bytes": 533528576,
+      "system_gpu_device_percent": 80
+    },
+    {
+      "seconds": 2.1622418750012002,
+      "process_cpu_percent": 36.86550101808588,
+      "rss_bytes": 535773184,
+      "system_gpu_device_percent": 0
+    },
+    {
+      "seconds": 2.7103806250015623,
+      "process_cpu_percent": 35.29836195668924,
+      "rss_bytes": 538099712,
+      "system_gpu_device_percent": 77
+    },
+    {
+      "seconds": 3.249520749999647,
+      "process_cpu_percent": 33.3345621420106,
+      "rss_bytes": 540360704,
+      "system_gpu_device_percent": 86
+    },
+    {
+      "seconds": 3.7930982500001846,
+      "process_cpu_percent": 37.71366548464518,
+      "rss_bytes": 543277056,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 4.344413333001285,
+      "process_cpu_percent": 34.26425393110877,
+      "rss_bytes": 545193984,
+      "system_gpu_device_percent": 75
+    },
+    {
+      "seconds": 4.893647749999218,
+      "process_cpu_percent": 36.06620303999362,
+      "rss_bytes": 547454976,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 5.445549583000684,
+      "process_cpu_percent": 32.96600756162322,
+      "rss_bytes": 549797888,
+      "system_gpu_device_percent": 83
+    },
+    {
+      "seconds": 5.987033375000465,
+      "process_cpu_percent": 35.00566458323029,
+      "rss_bytes": 552026112,
+      "system_gpu_device_percent": 77
+    },
+    {
+      "seconds": 6.542213125001581,
+      "process_cpu_percent": 36.1711679865118,
+      "rss_bytes": 554336256,
+      "system_gpu_device_percent": 75
+    },
+    {
+      "seconds": 7.0853870829996595,
+      "process_cpu_percent": 36.123049919984275,
+      "rss_bytes": 556384256,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 7.642996000002313,
+      "process_cpu_percent": 35.86474209827749,
+      "rss_bytes": 558661632,
+      "system_gpu_device_percent": 80
+    },
+    {
+      "seconds": 8.194600708000507,
+      "process_cpu_percent": 35.437152215285224,
+      "rss_bytes": 560939008,
+      "system_gpu_device_percent": 100
+    },
+    {
+      "seconds": 8.741155374998925,
+      "process_cpu_percent": 32.83038474182846,
+      "rss_bytes": 564412416,
+      "system_gpu_device_percent": 79
+    },
+    {
+      "seconds": 9.29483804100164,
+      "process_cpu_percent": 35.98126006693949,
+      "rss_bytes": 566738944,
+      "system_gpu_device_percent": 80
+    },
+    {
+      "seconds": 9.847719916000642,
+      "process_cpu_percent": 35.006754381367415,
+      "rss_bytes": 568967168,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 10.401417041000968,
+      "process_cpu_percent": 32.57141709014529,
+      "rss_bytes": 571310080,
+      "system_gpu_device_percent": 80
+    },
+    {
+      "seconds": 10.961433874999784,
+      "process_cpu_percent": 36.08837944332725,
+      "rss_bytes": 573734912,
+      "system_gpu_device_percent": 79
+    },
+    {
+      "seconds": 11.523840416000894,
+      "process_cpu_percent": 34.60539410753687,
+      "rss_bytes": 575668224,
+      "system_gpu_device_percent": 80
+    },
+    {
+      "seconds": 12.080399665999721,
+      "process_cpu_percent": 34.92296642278596,
+      "rss_bytes": 577650688,
+      "system_gpu_device_percent": 81
+    },
+    {
+      "seconds": 12.626469708000513,
+      "process_cpu_percent": 34.21319347889242,
+      "rss_bytes": 579944448,
+      "system_gpu_device_percent": 79
+    },
+    {
+      "seconds": 13.178230666002491,
+      "process_cpu_percent": 36.89079429198594,
+      "rss_bytes": 582172672,
+      "system_gpu_device_percent": 34
+    },
+    {
+      "seconds": 13.728279958002531,
+      "process_cpu_percent": 31.434637316102002,
+      "rss_bytes": 584302592,
+      "system_gpu_device_percent": 81
+    },
+    {
+      "seconds": 14.276046166000015,
+      "process_cpu_percent": 37.023642028120875,
+      "rss_bytes": 586563584,
+      "system_gpu_device_percent": 66
+    },
+    {
+      "seconds": 14.828315916001884,
+      "process_cpu_percent": 34.76724915665754,
+      "rss_bytes": 588857344,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 15.371722291001788,
+      "process_cpu_percent": 33.10101027063429,
+      "rss_bytes": 591233024,
+      "system_gpu_device_percent": 84
+    },
+    {
+      "seconds": 15.928392791000078,
+      "process_cpu_percent": 32.341753335330935,
+      "rss_bytes": 593657856,
+      "system_gpu_device_percent": 80
+    },
+    {
+      "seconds": 16.475051416000497,
+      "process_cpu_percent": 38.18726906574283,
+      "rss_bytes": 595689472,
+      "system_gpu_device_percent": 76
+    },
+    {
+      "seconds": 17.028453082999476,
+      "process_cpu_percent": 37.12457194321723,
+      "rss_bytes": 597983232,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 17.584179416000552,
+      "process_cpu_percent": 33.91345502420798,
+      "rss_bytes": 600113152,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 18.140671166001994,
+      "process_cpu_percent": 36.723814863287856,
+      "rss_bytes": 602275840,
+      "system_gpu_device_percent": 76
+    },
+    {
+      "seconds": 18.69469941599891,
+      "process_cpu_percent": 34.905079298948344,
+      "rss_bytes": 604569600,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 19.245240208001633,
+      "process_cpu_percent": 35.638231144737766,
+      "rss_bytes": 606863360,
+      "system_gpu_device_percent": 83
+    },
+    {
+      "seconds": 19.792094958000234,
+      "process_cpu_percent": 31.385482159648372,
+      "rss_bytes": 608419840,
+      "system_gpu_device_percent": 79
+    },
+    {
+      "seconds": 20.339267625000502,
+      "process_cpu_percent": 36.13612519864808,
+      "rss_bytes": 611418112,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 20.89484591600194,
+      "process_cpu_percent": 36.48288698153554,
+      "rss_bytes": 613711872,
+      "system_gpu_device_percent": 76
+    },
+    {
+      "seconds": 21.448337958001503,
+      "process_cpu_percent": 36.013706589146814,
+      "rss_bytes": 616005632,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 22.00019666600201,
+      "process_cpu_percent": 36.165416456528106,
+      "rss_bytes": 618299392,
+      "system_gpu_device_percent": 76
+    },
+    {
+      "seconds": 22.54970616599894,
+      "process_cpu_percent": 37.34839889049203,
+      "rss_bytes": 620560384,
+      "system_gpu_device_percent": 74
+    },
+    {
+      "seconds": 23.10618816600254,
+      "process_cpu_percent": 36.88564949067037,
+      "rss_bytes": 622772224,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 23.664443166002457,
+      "process_cpu_percent": 35.62977492365126,
+      "rss_bytes": 625115136,
+      "system_gpu_device_percent": 77
+    },
+    {
+      "seconds": 24.20757537499958,
+      "process_cpu_percent": 37.480192967358775,
+      "rss_bytes": 627343360,
+      "system_gpu_device_percent": 64
+    },
+    {
+      "seconds": 24.75746537500163,
+      "process_cpu_percent": 38.976158867991835,
+      "rss_bytes": 629440512,
+      "system_gpu_device_percent": 76
+    },
+    {
+      "seconds": 25.321677291001834,
+      "process_cpu_percent": 35.155939528212386,
+      "rss_bytes": 631488512,
+      "system_gpu_device_percent": 80
+    }
+  ],
+  "gpu_counter_note": "System-wide IORegistry Device Utilization %, not process GPU usage; no power/thermal data without sudo",
+  "summary": {
+    "type": "summary",
+    "steps": 2048,
+    "emulator_frames_upper_bound": 8192,
+    "updates": 449,
+    "seconds": 25.73566949999804,
+    "replay_size": 2046,
+    "env_version": "contra-level1-three-rewards-v2",
+    "reward_mode": "progress",
+    "run_totals": {
+      "game_score_gain": 3800,
+      "integration_scroll_return": 729.0,
+      "progress_return": 1.84765625,
+      "score_clipped_return": 17.0,
+      "training_return": 1.84765625,
+      "deaths": 1,
+      "extra_lives": 0,
+      "successes": 0,
+      "emulator_frames": 8189,
+      "episodes_completed": 2
+    },
+    "c51_mean_target_outside_mass": 0.0,
+    "partial_episode": {
+      "game_over": 0,
+      "level": 0,
+      "player_state": 1,
+      "score": 0,
+      "lives": 2,
+      "xscroll": 0,
+      "success": false,
+      "lost_life": false,
+      "death": false,
+      "deaths": 0,
+      "extra_lives": 0,
+      "game_score_delta": 0,
+      "integration_scroll_reward": 0.0,
+      "progress_reward": 0.0,
+      "score_clipped_reward": 0.0,
+      "training_reward": 0.0,
+      "frames_advanced": 4,
+      "episode_game_score_gain": 0,
+      "episode_integration_scroll_return": 0.0,
+      "episode_progress_return": 0.0,
+      "episode_score_clipped_return": 0.0,
+      "episode_training_return": 0.0,
+      "episode_deaths": 0,
+      "episode_extra_lives": 0,
+      "episode_success": false,
+      "episode_emulator_frames": 224,
+      "episode_score_saturations": 0,
+      "game_score": 0,
+      "initial_game_score": 0,
+      "progress_max": 0,
+      "decision_steps": 56,
+      "reward_mode": "progress",
+      "env_version": "contra-level1-three-rewards-v2"
+    }
+  },
+  "extra": {
+    "threads": 4,
+    "batch": 32
+  },
+  "mps_memory": {
+    "allocated_bytes": 188608768,
+    "driver_allocated_bytes": 261029888
+  },
+  "process_cpu_percent_sample_mean": 35.95142660588466,
+  "process_cpu_percent_sample_max": 63.12336366707279,
+  "system_gpu_device_percent_sample_mean": 75.78260869565217,
+  "system_gpu_device_percent_sample_max": 100
+}

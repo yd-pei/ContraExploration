@@ -1,0 +1,8 @@
+{
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "torch": "2.14.1",
+  "mps_built": true,
+  "mps_available": false,
+  "cpu_cores": null,
+  "physical_memory_bytes": null
+}

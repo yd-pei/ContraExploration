@@ -1,0 +1,107 @@
+{
+  "machine": {
+    "model": "MacBook Air Apple M4",
+    "cpu_cores": 10,
+    "performance_cores": 4,
+    "efficiency_cores": 6,
+    "gpu_cores": 10,
+    "memory_gib": 24
+  },
+  "budget": {
+    "steps": 2048,
+    "warmup": 256,
+    "batch": 32,
+    "capacity": 20000,
+    "max_steps": 1000,
+    "seed": 4,
+    "threads": 4,
+    "updates": 449,
+    "train_every": 4
+  },
+  "results": [
+    {
+      "run": "base-cpu4-normal",
+      "decision_steps_per_second": 70.3072443033725,
+      "emulator_frames_per_second": 281.12598808609243,
+      "updates_per_second": 15.41403940049524,
+      "peak_rss_mib": 542.5,
+      "process_cpu_percent": 275.3267149509601,
+      "system_gpu_percent": 22.98148148148148,
+      "system_gpu_max": 61
+    },
+    {
+      "run": "opt-cpu4-clean",
+      "decision_steps_per_second": 77.96391698107085,
+      "emulator_frames_per_second": 311.74146296776814,
+      "updates_per_second": 17.092675158447662,
+      "peak_rss_mib": 625.953125,
+      "process_cpu_percent": 270.9577994695846,
+      "system_gpu_percent": 36.734693877551024,
+      "system_gpu_max": 64
+    },
+    {
+      "run": "base-mps4",
+      "decision_steps_per_second": 64.43462640526873,
+      "emulator_frames_per_second": 257.54973230152825,
+      "updates_per_second": 14.126536746076981,
+      "peak_rss_mib": 539.890625,
+      "process_cpu_percent": 30.82740042058806,
+      "system_gpu_percent": 70.48275862068965,
+      "system_gpu_max": 81
+    },
+    {
+      "run": "opt-mps4",
+      "decision_steps_per_second": 79.57760044003186,
+      "emulator_frames_per_second": 318.1938330094829,
+      "updates_per_second": 17.44645634647183,
+      "peak_rss_mib": 603.359375,
+      "process_cpu_percent": 35.88542954905687,
+      "system_gpu_percent": 75.78260869565217,
+      "system_gpu_max": 100
+    },
+    {
+      "run": "opt-mps4-repeat",
+      "decision_steps_per_second": 79.7399385193309,
+      "emulator_frames_per_second": 318.9597540773236,
+      "updates_per_second": 17.482047067958778,
+      "peak_rss_mib": 602.78125,
+      "process_cpu_percent": 36.55963268112442,
+      "system_gpu_percent": 76.02173913043478,
+      "system_gpu_max": 85
+    }
+  ],
+  "cpu_speedup_percent": 10.890304055525446,
+  "mps_speedup_percent": 23.62726987607364,
+  "optimized_mps_mean_steps_per_second": 79.65876947968138,
+  "correctness": {
+    "same_model_keys": true,
+    "all_model_tensors_bit_identical": true,
+    "max_absolute_tensor_difference": 0.0
+  },
+  "adam_numerics": {
+    "loop": {
+      "parameter_max_abs_error_vs_float64": 2.159709007187871e-07,
+      "exp_avg_max_relative_error_vs_float64": 1.1981207800469862e-06,
+      "exp_avg_sq_max_relative_error_vs_float64": 1.4329811698791476e-07
+    },
+    "fused": {
+      "parameter_max_abs_error_vs_float64": 2.159709007187871e-07,
+      "exp_avg_max_relative_error_vs_float64": 1.1981207800469862e-06,
+      "exp_avg_sq_max_relative_error_vs_float64": 1.3001035513220143e-05
+    },
+    "parameter_max_difference_between_backends": 1.4901161193847656e-08,
+    "float32_one_minus_beta2": 0.0009999871253967285,
+    "exact_one_minus_beta2": 0.001
+  },
+  "tests": {
+    "passed": 26,
+    "normal_metal_context": true
+  },
+  "long_training_started": false,
+  "exclusions": {
+    "base-cpu1": "Thread exploration briefly overlapped another process at its end; not used for final speedup claims",
+    "opt-cpu4": "Briefly overlapped CPU1 exploration; replaced by independent opt-cpu4-clean"
+  },
+  "timing_scope": "Training loop including inference, environment, replay, update, logs and final checkpoint; excludes imports/model/environment construction",
+  "gpu_counter_scope": "System-wide IORegistry counter; CPU-only runs also observed background GPU activity, so not attributable solely to training"
+}

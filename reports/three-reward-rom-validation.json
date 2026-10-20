@@ -1,0 +1,64 @@
+{
+  "env_version": "contra-level1-three-rewards-v2",
+  "identical_actions_and_common_metrics": true,
+  "score_unit": "100 displayed points per RAM unit; verified against game renderer source",
+  "results": [
+    {
+      "reward_mode": "score_clipped",
+      "agent_steps": 4000,
+      "game_score_gain": 100,
+      "score_events": 1,
+      "deaths": 0,
+      "episodes_completed": 4,
+      "training_return": 1.0,
+      "examples": [
+        {
+          "step": 3983,
+          "game_score_delta": 100,
+          "score_clipped_reward": 1.0,
+          "progress_reward": 0.0,
+          "training_reward": 1.0
+        }
+      ],
+      "common_sha256": "56a773e257f6dde8d22c3303b715204a245e92e1985aa1702b99b61815d9f874"
+    },
+    {
+      "reward_mode": "game_score",
+      "agent_steps": 4000,
+      "game_score_gain": 100,
+      "score_events": 1,
+      "deaths": 0,
+      "episodes_completed": 4,
+      "training_return": 100.0,
+      "examples": [
+        {
+          "step": 3983,
+          "game_score_delta": 100,
+          "score_clipped_reward": 1.0,
+          "progress_reward": 0.0,
+          "training_reward": 100.0
+        }
+      ],
+      "common_sha256": "56a773e257f6dde8d22c3303b715204a245e92e1985aa1702b99b61815d9f874"
+    },
+    {
+      "reward_mode": "progress",
+      "agent_steps": 4000,
+      "game_score_gain": 100,
+      "score_events": 1,
+      "deaths": 0,
+      "episodes_completed": 4,
+      "training_return": 0.12890625,
+      "examples": [
+        {
+          "step": 3983,
+          "game_score_delta": 100,
+          "score_clipped_reward": 1.0,
+          "progress_reward": 0.0,
+          "training_reward": 0.0
+        }
+      ],
+      "common_sha256": "56a773e257f6dde8d22c3303b715204a245e92e1985aa1702b99b61815d9f874"
+    }
+  ]
+}

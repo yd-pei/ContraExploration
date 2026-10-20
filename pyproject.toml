@@ -1,0 +1,25 @@
+[project]
+name = "contra-rainbow"
+version = "0.1.0"
+description = "Researchable Rainbow DQN for NES Contra via Stable Retro"
+requires-python = ">=3.12,<3.13"
+dependencies = ["stable-retro==1.0.1", "torch==2.14.1", "gymnasium==1.4.0", "numpy==2.5.4", "pillow==13.0.0", "imageio==2.38.1", "imageio-ffmpeg==0.6.0"]
+
+[dependency-groups]
+dev = ["pytest==9.1.1"]
+
+[project.scripts]
+contra-rl = "contra_rl.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+cache-dir = ".uv-cache"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["contra_rl"]

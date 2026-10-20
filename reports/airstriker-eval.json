@@ -1,0 +1,21 @@
+[
+  {
+    "episode": 0,
+    "game": "Airstriker-Genesis-v0",
+    "policy": "greedy_mean",
+    "steps": 100,
+    "return_": 0.0,
+    "raw_return": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "initial": {},
+    "final": {
+      "gameover": 9,
+      "lives": 3,
+      "score": 0,
+      "raw_reward": 0.0,
+      "shaped_reward": 0.0,
+      "decision_steps": 100
+    }
+  }
+]

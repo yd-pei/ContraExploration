@@ -1,0 +1,4 @@
+{
+  "done": {"variables": {"game_over": {"op": "positive"}, "level": {"measurement": "delta", "op": "positive"}}},
+  "reward": {"variables": {"xscroll": {"reward": 1.0}}}
+}

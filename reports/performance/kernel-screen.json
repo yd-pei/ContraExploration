@@ -1,0 +1,42 @@
+[
+  {
+    "threads": 1,
+    "layout": "contiguous",
+    "forward_backward_ms": 22.78187850000298
+  },
+  {
+    "threads": 1,
+    "layout": "channels_last",
+    "forward_backward_ms": 23.419826416708627
+  },
+  {
+    "threads": 2,
+    "layout": "contiguous",
+    "forward_backward_ms": 21.937909666727744
+  },
+  {
+    "threads": 2,
+    "layout": "channels_last",
+    "forward_backward_ms": 22.194822916389967
+  },
+  {
+    "threads": 4,
+    "layout": "contiguous",
+    "forward_backward_ms": 20.948406249772233
+  },
+  {
+    "threads": 4,
+    "layout": "channels_last",
+    "forward_backward_ms": 22.422631916621565
+  },
+  {
+    "threads": 8,
+    "layout": "contiguous",
+    "forward_backward_ms": 22.92910416660258
+  },
+  {
+    "threads": 8,
+    "layout": "channels_last",
+    "forward_backward_ms": 23.455246499906934
+  }
+]

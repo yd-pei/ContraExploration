@@ -1,0 +1,5 @@
+{
+  "same_model_keys": true,
+  "all_model_tensors_bit_identical": true,
+  "max_absolute_tensor_difference": 0.0
+}

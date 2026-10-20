@@ -1,0 +1,21 @@
+{
+  "checked_date": "2026-10-20",
+  "game": "Contra (USA), NES, original unmodified dump",
+  "source_page": "https://nesninja.com/game/nes/contra?rom=Contra+%28U%29+%5B%21%5D.nes",
+  "download_url": "https://nesninja.com/downloadsnes/Contra%20%28U%29%20%5B%21%5D.nes",
+  "download_result": "HTTP success; file downloaded and emulator tested; no login or payment required",
+  "bytes": 131088,
+  "ines_header_bytes": 16,
+  "payload_sha1": "979494e7869ac7ab4815fdbd1dc99f893f713fbf",
+  "stable_retro_integration": "Contra-Nes (experimental)",
+  "hash_matches": true,
+  "local_copy": "roms/Contra-USA.nes",
+  "source_authorization": "Public third-party download; no publisher distribution license established. Not represented as an official or licensed distribution.",
+  "other_sources": [
+    {"url": "https://archive.org/details/No-Intro-Collection_2016-01-03_Fixed", "result": "Official Stable Retro docs link here, but metadata marks item access-restricted and NES zip private. No restricted download attempted."},
+    {"url": "https://www.planetemu.net/en/rom/nintendo-nintendo-entertainment-system/contra-usa", "result": "USA ROM listed; JavaScript quota check required. Download not attempted after matching ROM obtained elsewhere."},
+    {"url": "https://emubox.net/en/games/contra-nes/download", "result": "USA/Japan variants listed in search; direct page requests timed out; file availability not confirmed."},
+    {"url": "https://gamegear.net/archive/games/nes/contra-usa", "result": "403 on page fetch; did not bypass."},
+    {"url": "https://www.konami.com/games/50th/ac/contra/asia/en/", "result": "Official collection includes NES/FC Contra. Standalone ROM export/hash compatibility not confirmed; no purchase made or recommended as verified ROM solution."}
+  ]
+}

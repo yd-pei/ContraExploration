@@ -1,0 +1,36 @@
+[
+  {
+    "episode": 0,
+    "game": "Contra-Nes",
+    "policy": "random",
+    "steps": 100,
+    "return_": 0.0,
+    "raw_return": 0.0,
+    "terminated": false,
+    "truncated": true,
+    "initial": {
+      "game_over": 0,
+      "level": 0,
+      "player_state": 1,
+      "score": 0,
+      "lives": 2,
+      "xscroll": 0
+    },
+    "final": {
+      "game_over": 0,
+      "level": 0,
+      "player_state": 1,
+      "score": 0,
+      "lives": 2,
+      "xscroll": 0,
+      "success": false,
+      "lost_life": false,
+      "death": false,
+      "progress_max": 0,
+      "raw_reward": 0.0,
+      "shaped_reward": 0.0,
+      "reward_mode": "native",
+      "decision_steps": 100
+    }
+  }
+]

@@ -1,0 +1,119 @@
+{
+  "type": "summary",
+  "steps": 2048,
+  "emulator_frames_upper_bound": 8192,
+  "updates": 449,
+  "seconds": 23.74554979200002,
+  "replay_size": 2046,
+  "tests": {
+    "passed": 8,
+    "command": "uv run pytest -q"
+  },
+  "checkpoint": "runs/contra-validated/latest.pt",
+  "rom_valid": true,
+  "eval": [
+    {
+      "episode": 0,
+      "game": "Contra-Nes",
+      "policy": "greedy_mean",
+      "steps": 1500,
+      "return_": 0.03125,
+      "raw_return": 8.0,
+      "terminated": false,
+      "truncated": true,
+      "initial": {
+        "game_over": 0,
+        "level": 0,
+        "player_state": 1,
+        "score": 0,
+        "lives": 2,
+        "xscroll": 0
+      },
+      "final": {
+        "game_over": 0,
+        "level": 0,
+        "player_state": 1,
+        "score": 0,
+        "lives": 2,
+        "xscroll": 8,
+        "success": false,
+        "lost_life": false,
+        "death": false,
+        "progress_max": 8,
+        "raw_reward": 0.0,
+        "shaped_reward": 0.0,
+        "decision_steps": 1500
+      }
+    },
+    {
+      "episode": 1,
+      "game": "Contra-Nes",
+      "policy": "greedy_mean",
+      "steps": 1500,
+      "return_": 0.03125,
+      "raw_return": 8.0,
+      "terminated": false,
+      "truncated": true,
+      "initial": {
+        "game_over": 0,
+        "level": 0,
+        "player_state": 1,
+        "score": 0,
+        "lives": 2,
+        "xscroll": 0
+      },
+      "final": {
+        "game_over": 0,
+        "level": 0,
+        "player_state": 1,
+        "score": 0,
+        "lives": 2,
+        "xscroll": 8,
+        "success": false,
+        "lost_life": false,
+        "death": false,
+        "progress_max": 8,
+        "raw_reward": 0.0,
+        "shaped_reward": 0.0,
+        "decision_steps": 1500
+      }
+    },
+    {
+      "episode": 2,
+      "game": "Contra-Nes",
+      "policy": "greedy_mean",
+      "steps": 1500,
+      "return_": 0.03125,
+      "raw_return": 8.0,
+      "terminated": false,
+      "truncated": true,
+      "initial": {
+        "game_over": 0,
+        "level": 0,
+        "player_state": 1,
+        "score": 0,
+        "lives": 2,
+        "xscroll": 0
+      },
+      "final": {
+        "game_over": 0,
+        "level": 0,
+        "player_state": 1,
+        "score": 0,
+        "lives": 2,
+        "xscroll": 8,
+        "success": false,
+        "lost_life": false,
+        "death": false,
+        "progress_max": 8,
+        "raw_reward": 0.0,
+        "shaped_reward": 0.0,
+        "decision_steps": 1500
+      }
+    }
+  ],
+  "caveat": "Short execution validation only; no first-stage clear achieved or verified in emulator",
+  "reward_mode": "progress",
+  "task": "first life, first level",
+  "native_mode": "Separately probe-tested without clipping/scaling; no long training run"
+}

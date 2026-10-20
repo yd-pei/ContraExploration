@@ -1,0 +1,59 @@
+[
+  {
+    "policy": "noop",
+    "steps": 4000,
+    "changes": 4000,
+    "terminated": false,
+    "truncated": true,
+    "final": {
+      "level": 0,
+      "lives": 2,
+      "player_state": 1,
+      "score": 0,
+      "xscroll": 0,
+      "success": false,
+      "lost_life": false,
+      "raw_reward": 0.0,
+      "shaped_reward": 0.0,
+      "decision_steps": 4000
+    }
+  },
+  {
+    "policy": "right_fire",
+    "steps": 63,
+    "changes": 63,
+    "terminated": true,
+    "truncated": false,
+    "final": {
+      "level": 0,
+      "lives": 1,
+      "player_state": 11,
+      "score": 0,
+      "xscroll": 70,
+      "success": false,
+      "lost_life": true,
+      "raw_reward": 0.0,
+      "shaped_reward": -1.0,
+      "decision_steps": 63
+    }
+  },
+  {
+    "policy": "random",
+    "steps": 4000,
+    "changes": 4000,
+    "terminated": false,
+    "truncated": true,
+    "final": {
+      "level": 0,
+      "lives": 2,
+      "player_state": 11,
+      "score": 1,
+      "xscroll": 25,
+      "success": false,
+      "lost_life": false,
+      "raw_reward": 0.0,
+      "shaped_reward": 0.0,
+      "decision_steps": 4000
+    }
+  }
+]

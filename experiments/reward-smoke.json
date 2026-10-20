@@ -1,0 +1,39 @@
+{
+  "description": "\u4e09\u79cd\u5956\u52b1\u7684\u77ed\u7a0b\u6267\u884c\u9a8c\u8bc1\uff0c\u4e0d\u662f\u6548\u679c\u6392\u540d",
+  "output_root": "runs/reward-smoke-v2",
+  "seeds": [
+    4
+  ],
+  "reward_modes": [
+    "score_clipped",
+    "game_score",
+    "progress"
+  ],
+  "train": {
+    "game": "Contra-Nes",
+    "steps": 1024,
+    "max_steps": 500,
+    "all_lives": false,
+    "capacity": 2048,
+    "batch": 16,
+    "warmup": 512,
+    "train_every": 4,
+    "target_every": 256,
+    "checkpoint_every": 512,
+    "n_step": 3,
+    "gamma": 0.99,
+    "atoms": 51,
+    "vmin": -10.0,
+    "vmax": 10000.0,
+    "log_every": 100,
+    "device": "cpu",
+    "threads": 4,
+    "replay_storage": "zlib",
+    "adam_backend": "loop",
+    "standard_actor": false
+  },
+  "evaluation": {
+    "episodes": 1,
+    "max_steps": 500
+  }
+}

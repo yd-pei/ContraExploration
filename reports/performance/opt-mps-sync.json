@@ -1,0 +1,195 @@
+{
+  "device": "mps",
+  "phase_timers_synchronized": true,
+  "phase_timing_note": "Nested phase totals overlap; without sync MPS timings measure host dispatch, not isolated GPU kernels",
+  "measured_seconds": 3.3558276250005292,
+  "steps_per_second": 76.28520550126875,
+  "emulator_frames_per_second": 305.140822005075,
+  "updates_per_second": 16.687388703402537,
+  "steps": 256,
+  "updates": 56,
+  "process_cpu_percent_mean": 33.16889674867685,
+  "cpu_percent_note": "100% = one CPU core; 1000% = all 10 cores on this Mac",
+  "peak_rss_bytes": 528662528,
+  "phases": {
+    "inference": {
+      "seconds": 0.5864118299869006,
+      "calls": 256,
+      "mean_ms": 2.2906712108863303
+    },
+    "emulator_step": {
+      "seconds": 0.21533385904695024,
+      "calls": 1024,
+      "mean_ms": 0.21028697172553734
+    },
+    "preprocessing": {
+      "seconds": 0.04423446097280248,
+      "calls": 256,
+      "mean_ms": 0.1727908631750097
+    },
+    "env_step_total": {
+      "seconds": 0.27189570600239676,
+      "calls": 256,
+      "mean_ms": 1.0620926015718624
+    },
+    "replay_add": {
+      "seconds": 0.010926010028924793,
+      "calls": 256,
+      "mean_ms": 0.04267972667548747
+    },
+    "replay_sample": {
+      "seconds": 0.011043209004128585,
+      "calls": 56,
+      "mean_ms": 0.19720016078801045
+    },
+    "tensor_transfer": {
+      "seconds": 0.1010981210238242,
+      "calls": 56,
+      "mean_ms": 1.8053235897111466
+    },
+    "learn_forward_and_projection": {
+      "seconds": 0.6759876250143861,
+      "calls": 56,
+      "mean_ms": 12.07120758954261
+    },
+    "backward_and_clip": {
+      "seconds": 1.0932402500147873,
+      "calls": 56,
+      "mean_ms": 19.522147321692632
+    },
+    "optimizer": {
+      "seconds": 0.2642780009919079,
+      "calls": 56,
+      "mean_ms": 4.719250017712641
+    },
+    "priority_update": {
+      "seconds": 0.034795169995049946,
+      "calls": 56,
+      "mean_ms": 0.6213423213401776
+    },
+    "learn_total": {
+      "seconds": 2.2804814640003315,
+      "calls": 56,
+      "mean_ms": 40.72288328572021
+    },
+    "logging": {
+      "seconds": 0.0017617490120755974,
+      "calls": 33,
+      "mean_ms": 0.053386333699260526
+    },
+    "checkpoint": {
+      "seconds": 0.1998295000012149,
+      "calls": 1,
+      "mean_ms": 199.8295000012149
+    }
+  },
+  "samples": [
+    {
+      "seconds": 0.5091404580016388,
+      "process_cpu_percent": 36.82067025747098,
+      "rss_bytes": 517079040,
+      "system_gpu_device_percent": 79
+    },
+    {
+      "seconds": 1.0545032920017547,
+      "process_cpu_percent": 28.936515318160925,
+      "rss_bytes": 519651328,
+      "system_gpu_device_percent": 81
+    },
+    {
+      "seconds": 1.59580300000016,
+      "process_cpu_percent": 29.71015827713576,
+      "rss_bytes": 522272768,
+      "system_gpu_device_percent": 83
+    },
+    {
+      "seconds": 2.128016333001142,
+      "process_cpu_percent": 32.62338412699626,
+      "rss_bytes": 524451840,
+      "system_gpu_device_percent": 78
+    },
+    {
+      "seconds": 2.675905625001178,
+      "process_cpu_percent": 34.64020975974598,
+      "rss_bytes": 526499840,
+      "system_gpu_device_percent": 83
+    },
+    {
+      "seconds": 3.222703708001063,
+      "process_cpu_percent": 34.774445249845606,
+      "rss_bytes": 528564224,
+      "system_gpu_device_percent": 78
+    }
+  ],
+  "gpu_counter_note": "System-wide IORegistry Device Utilization %, not process GPU usage; no power/thermal data without sudo",
+  "summary": {
+    "type": "summary",
+    "steps": 256,
+    "emulator_frames_upper_bound": 1024,
+    "updates": 56,
+    "seconds": 3.3556392499995127,
+    "replay_size": 254,
+    "env_version": "contra-level1-three-rewards-v2",
+    "reward_mode": "progress",
+    "run_totals": {
+      "game_score_gain": 100,
+      "integration_scroll_return": 103.0,
+      "progress_return": -0.59765625,
+      "score_clipped_return": 1.0,
+      "training_return": -0.59765625,
+      "deaths": 1,
+      "extra_lives": 0,
+      "successes": 0,
+      "emulator_frames": 1024,
+      "episodes_completed": 1
+    },
+    "c51_mean_target_outside_mass": 0.0,
+    "partial_episode": {
+      "game_over": 0,
+      "level": 0,
+      "player_state": 1,
+      "score": 0,
+      "lives": 2,
+      "xscroll": 0,
+      "success": false,
+      "lost_life": false,
+      "death": false,
+      "deaths": 0,
+      "extra_lives": 0,
+      "game_score_delta": 0,
+      "integration_scroll_reward": 0.0,
+      "progress_reward": 0.0,
+      "score_clipped_reward": 0.0,
+      "training_reward": 0.0,
+      "frames_advanced": 4,
+      "episode_game_score_gain": 0,
+      "episode_integration_scroll_return": 0.0,
+      "episode_progress_return": 0.0,
+      "episode_score_clipped_return": 0.0,
+      "episode_training_return": 0.0,
+      "episode_deaths": 0,
+      "episode_extra_lives": 0,
+      "episode_success": false,
+      "episode_emulator_frames": 304,
+      "episode_score_saturations": 0,
+      "game_score": 0,
+      "initial_game_score": 0,
+      "progress_max": 0,
+      "decision_steps": 76,
+      "reward_mode": "progress",
+      "env_version": "contra-level1-three-rewards-v2"
+    }
+  },
+  "extra": {
+    "threads": 4,
+    "batch": 32
+  },
+  "mps_memory": {
+    "allocated_bytes": 188608768,
+    "driver_allocated_bytes": 261029888
+  },
+  "process_cpu_percent_sample_mean": 32.91756383155925,
+  "process_cpu_percent_sample_max": 36.82067025747098,
+  "system_gpu_device_percent_sample_mean": 80.33333333333333,
+  "system_gpu_device_percent_sample_max": 83
+}

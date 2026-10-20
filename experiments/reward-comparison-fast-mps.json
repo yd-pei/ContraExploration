@@ -1,0 +1,41 @@
+{
+  "description": "\u4e09\u79cd\u5956\u52b1\u5171\u7528\u7684 M4 \u5b9e\u6d4b\u63a8\u8350\u6027\u80fd\u914d\u7f6e\uff1b\u9ed8\u8ba4\u53ea\u6253\u5370\u8ba1\u5212",
+  "output_root": "runs/reward-comparison-fast-mps",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "reward_modes": [
+    "score_clipped",
+    "game_score",
+    "progress"
+  ],
+  "train": {
+    "game": "Contra-Nes",
+    "steps": 1000000,
+    "max_steps": 9000,
+    "all_lives": false,
+    "capacity": 20000,
+    "batch": 32,
+    "warmup": 2000,
+    "train_every": 4,
+    "target_every": 2000,
+    "checkpoint_every": 10000,
+    "n_step": 3,
+    "gamma": 0.99,
+    "atoms": 51,
+    "vmin": -10.0,
+    "vmax": 10000.0,
+    "log_every": 100,
+    "device": "mps",
+    "threads": 4,
+    "replay_storage": "raw",
+    "adam_backend": "fused",
+    "standard_actor": false
+  },
+  "evaluation": {
+    "episodes": 3,
+    "max_steps": 9000
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "short_runs": [
+    {
+      "reward_mode": "score_clipped",
+      "output": "runs/config-smoke-score_clipped",
+      "steps": 128,
+      "updates": 25,
+      "source_config_sha256": "831d756a38ebc1555f28070c0934784c120146489b9afac249ee92bf7b63e56f"
+    },
+    {
+      "reward_mode": "game_score",
+      "output": "runs/config-smoke-game_score",
+      "steps": 128,
+      "updates": 25,
+      "source_config_sha256": "427bec00f666edf70fae1cb086daaa8af5a57e1ee2effe2e1922f96df1322149"
+    },
+    {
+      "reward_mode": "progress",
+      "output": "runs/config-smoke-progress",
+      "steps": 128,
+      "updates": 25,
+      "source_config_sha256": "463607698e8f41a6f62aef06d11c17a9369d20c5eeb06a51ce929b23619a829f"
+    }
+  ],
+  "config_and_comparison_tests_passed": 19,
+  "existing_output_refused_and_unchanged": true,
+  "long_training_started": false
+}

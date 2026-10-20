@@ -1,0 +1,41 @@
+{
+  "description": "\u4e09\u79cd\u5956\u52b1\u7684\u53d7\u63a7\u6bd4\u8f83\uff1b\u4ec5\u63d0\u4f9b\u5b9e\u9a8c\u5165\u53e3\uff0c\u9ed8\u8ba4\u53ea\u6253\u5370\u547d\u4ee4",
+  "output_root": "runs/reward-comparison",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "reward_modes": [
+    "score_clipped",
+    "game_score",
+    "progress"
+  ],
+  "train": {
+    "game": "Contra-Nes",
+    "steps": 1000000,
+    "max_steps": 9000,
+    "all_lives": false,
+    "capacity": 20000,
+    "batch": 32,
+    "warmup": 2000,
+    "train_every": 4,
+    "target_every": 2000,
+    "checkpoint_every": 10000,
+    "n_step": 3,
+    "gamma": 0.99,
+    "atoms": 51,
+    "vmin": -10.0,
+    "vmax": 10000.0,
+    "log_every": 100,
+    "device": "cpu",
+    "threads": 4,
+    "replay_storage": "zlib",
+    "adam_backend": "loop",
+    "standard_actor": false
+  },
+  "evaluation": {
+    "episodes": 3,
+    "max_steps": 9000
+  }
+}
