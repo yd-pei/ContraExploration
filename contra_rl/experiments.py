@@ -100,7 +100,7 @@ def main():
         raise ValueError('Comparison output already exists; choose a new --output-root')
     root.mkdir(parents=True, exist_ok=True)
     sources = ['contra_rl/env.py', 'contra_rl/model.py', 'contra_rl/agent.py',
-               'contra_rl/replay.py', 'contra_rl/cli.py', 'contra_rl/experiments.py', 'contra_rl/performance.py', 'contra_rl/config.py', 'uv.lock']
+               'contra_rl/replay.py', 'contra_rl/cli.py', 'contra_rl/experiments.py', 'contra_rl/performance.py', 'contra_rl/progress.py', 'contra_rl/config.py', 'uv.lock']
     manifest = dict(env_version=ENV_VERSION, config=config, reward_definitions=REWARD_SPECS, plan=plan,
                     source_sha256={p: hashlib.sha256((PROJECT_ROOT / p).read_bytes()).hexdigest() for p in sources},
                     evaluation_note='Compare common task metrics, not reward returns. Fixed state/greedy policy may repeat identical episodes.')

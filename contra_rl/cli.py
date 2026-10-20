@@ -14,6 +14,7 @@ from .agent import Agent
 from .env import make_env, ENV_VERSION, REWARD_MODES, REWARD_SPECS
 from .replay import NStep, PrioritizedReplay
 from .performance import span, TrainingProfile
+from .progress import FrameProgress
 
 
 def seed_all(seed):
@@ -107,7 +108,8 @@ def train(args):
         if profiler:
             profiler.start()
         started = time.perf_counter()
-        with (output / 'metrics.jsonl').open('w') as log:
+        with (output / 'metrics.jsonl').open('w') as log, FrameProgress(
+                args.steps, env.skip, enabled=args.progress) as progress:
             for step in range(1, args.steps + 1):
                 with span('inference'):
                     action = env.action_space.sample() if step <= args.warmup else agent.act(obs)
@@ -146,12 +148,13 @@ def train(args):
                     row = dict(type='episode', step=step, training_return=episode_return, length=episode_length,
                                terminated=bool(terminated), truncated=bool(truncated), info=info)
                     json_line(log, row)
-                    print(json.dumps(row), flush=True)
+                    progress.write(json.dumps(row))
                     obs, _ = env.reset()
                     episode_return, episode_length = 0., 0
                 if step % args.checkpoint_every == 0:
                     with span('checkpoint'):
                         save_checkpoint(output / 'latest.pt', agent, args, step, env.combos)
+                progress.update(info['frames_advanced'], step)
             with span('checkpoint'):
                 save_checkpoint(output / 'latest.pt', agent, args, args.steps, env.combos)
             summary = dict(type='summary', steps=args.steps, emulator_frames_upper_bound=args.steps * 4,
@@ -160,9 +163,10 @@ def train(args):
                            c51_mean_target_outside_mass=outside_sum / max(1, updates),
                            partial_episode=last_info if episode_length else None)
             json_line(log, summary)
-            print(json.dumps(summary), flush=True)
+            progress.write(json.dumps(summary))
             if profiler:
                 profiler.finish(summary, args.profile, extra={'threads': args.threads, 'batch': args.batch})
+            progress.finished = True
     finally:
         env.close()
 
@@ -272,6 +276,8 @@ def parse_args(argv=None):
             p.add_argument('--vmin', type=float, default=-10.)
             p.add_argument('--vmax', type=float, default=10000.)
             p.add_argument('--log-every', type=int, default=100)
+            p.add_argument('--progress', action=argparse.BooleanOptionalAction, default=True,
+                           help='Show actual emulator frame progress on stderr (total is estimated)')
             p.add_argument('--capacity', type=int, default=20000)
             p.add_argument('--batch', type=int, default=32)
             p.add_argument('--warmup', type=int, default=2000)
